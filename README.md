@@ -87,6 +87,14 @@ Firebase stores these objects as JSON under the paths described above. There is 
 
 ## Configuration and local run
 
+### Frontend Firebase configuration
+
+Create your own Firebase project and web app in the Firebase console, then add that app's configuration values to `frontend\firebase-config.js`. Use `frontend\firebase-config.example.js` as a guide for the required fields. The local config file is ignored by Git.
+
+Enable Firebase Authentication and Realtime Database for your project, and configure its authorized domains and database rules. Firebase web app config is visible to browser users; do not put service-account credentials in the frontend.
+
+### Backend configuration
+
 Configure the following environment variables:
 
 - `FIREBASE_CREDENTIALS_JSON` — Firebase service-account JSON; required.

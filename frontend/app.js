@@ -6,17 +6,7 @@ import {
   signOut,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCXLz3Z6yDI1eq2lSJYAtkrofps95S33Oc",
-  authDomain: "enrich-prs.firebaseapp.com",
-  databaseURL: "https://enrich-prs-default-rtdb.firebaseio.com",
-  projectId: "enrich-prs",
-  storageBucket: "enrich-prs.firebasestorage.app",
-  messagingSenderId: "562432770057",
-  appId: "1:562432770057:web:2c46fdb1ebbaaa92be38d8",
-  measurementId: "G-1SHRDJVP7N"
-};
+import { firebaseConfig } from "./firebase-config.js";
 
 const firebaseApp = initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);

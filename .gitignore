@@ -4,6 +4,7 @@
 **/appsettings.Development.json
 **/appsettings.Production.json
 **/appsettings.Local.json
+frontend/firebase-config.js
 
 # Build outputs and temporary files
 **/bin/
