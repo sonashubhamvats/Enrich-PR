@@ -1,0 +1,24 @@
+# Ignore sensitive application settings
+**/appsettings*.json
+!**/appsettings.json
+**/appsettings.Development.json
+**/appsettings.Production.json
+**/appsettings.Local.json
+
+# Build outputs and temporary files
+**/bin/
+**/obj/
+**/logs/
+*.log
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db

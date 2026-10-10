@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enrich PRs Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Login / Sign-up Screen -->
+  <section id="auth-screen" class="auth-container">
+    <div class="card auth-card">
+      <h2>Enrich PRs</h2>
+
+      <form id="auth-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="name@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required />
+        </div>
+
+        <div class="actions">
+          <button type="button" id="login-btn" class="btn btn-primary">Login</button>
+          <button type="button" id="signup-btn" class="btn btn-secondary">Sign Up</button>
+        </div>
+
+        <p id="auth-error" class="error"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Dashboard Screen -->
+  <section id="dashboard-screen" class="dashboard-container hidden">
+    <header class="top-bar">
+      <div class="logo">🔀 Enrich PRs</div>
+      <div class="user-info">
+        <span id="user-email"></span>
+        <button id="logout-btn" class="btn btn-danger">Logout</button>
+      </div>
+    </header>
+
+    <main class="dashboard-content">
+      <!-- Section A: Analyze Repo -->
+      <section class="card section-analyze">
+        <h3>Analyse Repository</h3>
+        <p class="section-desc">Submit a GitHub repository URL to analyze and prioritize open Pull Requests.</p>
+        <div class="input-group">
+          <input type="text" id="pr-link" placeholder="e.g. octocat/Hello-World" />
+          <input type="number" id="max-pr-count" placeholder="Max PRs" value="10" min="1" max="50"
+            title="Max PRs to fetch" />
+          <button id="analyse-btn" class="btn btn-primary">Analyse</button>
+        </div>
+        <p id="analyse-msg" class="msg"></p>
+      </section>
+
+      <!-- Section B: Get Repo Analysis -->
+      <section class="card section-history">
+        <div class="section-header">
+          <h3>Recent Repository Runs</h3>
+          <button id="refresh-btn" class="btn btn-sm">Refresh</button>
+        </div>
+        <div id="jobs-container" class="jobs-list">
+          <p class="loading-text">Loading recent runs...</p>
+        </div>
+      </section>
+    </main>
+  </section>
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
