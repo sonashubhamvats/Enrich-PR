@@ -25,6 +25,10 @@ The integration is designed to be cost-conscious: it sends bounded PR context (t
 
 When `JEV_API_KEY` is not configured, the service uses a local simulated evaluator so the end-to-end workflow can still produce the same classification fields during development.
 
+## Demo
+
+[Watch the demo video](assets/2026-10-11%2017-28-21.mkv)
+
 ## Screenshots
 
 ### Sign in
