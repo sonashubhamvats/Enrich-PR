@@ -1,6 +1,6 @@
 # Enrich PRs
 
-Enrich PRs is a .NET 6 web service that retrieves open pull requests from a GitHub repository and prioritizes them for review. It enriches each PR with its patch and changed-file list, sends that context to the JEV analysis service, and records a category, severity, priority score, and immediate-review recommendation. The API accepts work asynchronously: clients submit a repository, receive a job ID, and poll for progress and results.
+Enrich PRs is an ASP.NET web service that retrieves open pull requests from a GitHub repository and prioritizes them for review. It enriches each PR with its patch and changed-file list, sends that context to the JEV analysis service, and records a category, severity, priority score, and immediate-review recommendation. The API accepts work asynchronously: clients submit a repository, receive a job ID, and poll for progress and results.
 
 ## How a job flows through the system
 
@@ -113,5 +113,5 @@ cd backend
 dotnet run --urls "http://localhost:5000"
 ```
 
-The project targets .NET 6. In Development, Swagger UI is available at `/swagger`.
+The project is an ASP.NET application. In Development, Swagger UI is available at `/swagger`.
 "# Enrich-PR" 
